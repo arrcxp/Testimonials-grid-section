@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed';
+}
+
+@media only screen and (max-width: 376px) {
+    body {
+        overflow-y: scroll;
+        margin: 0;
+        padding: 10vh 0;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--light-grayish-blue);
+    }
+    
+    .all-components {
+        display: grid;
+        grid-template-columns: repeat(1, 90%);
+        grid-template-rows: repeat(5, auto);
+        gap: 3vh;
+        grid-template-areas:
+            'comp1'
+            'comp2'
+            'comp3'
+            'comp4'
+            'comp5';
+        justify-content: center;    }
+    
+    .comp-1,
+    .comp-2,
+    .comp-3,
+    .comp-4,
+    .comp-5 {
+        padding: 24px 32px;
+        border-radius: 16px;
+    }
+    
+    .comp-1 {
+        grid-area: comp1;
+        background-color: var(--moderate-violet);
+        background-image: url('/images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position: right 15% top 0%;
+    }
+    
+    .comp-2 {
+        grid-area: comp2;
+        background-color: var(--very-dark-grayish-blue);
+    }
+    
+    .comp-3 {
+        grid-area: comp3;
+        background-color: var(--white);
+    }
+    
+    .comp-4 {
+        grid-area: comp4;
+        background-color: var(--very-dark-blackish-blue);
+    }
+    
+    .comp-5 {
+        grid-area: comp5;
+        background-color: var(--white);
+    }
+    
+    .profile-box {
+        display: flex;
+        font-weight: 100;
+        margin-bottom: 16px;
+    }
+    
+    .profile-box img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: var(--light-grayish-blue) 1px solid;
+    }
+
+    .comp-4 img{
+        border: var(--moderate-violet) 1px solid;
+    }
+    
+    .profile-box .profile-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 8px;
+    }
+    
+    .profile-text p:nth-child(odd) {
+        color: var(--light-grayish-blue);
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .profile-text p:nth-child(even) {
+        color: var(--light-grayish-blue);
+        opacity: 50%;
+        font-size: 10px;
+    }
+    
+    h3 {
+        color: var(--white);
+        font-size: 22px;
+        font-weight: 600;
+    }
+    
+    h6 {
+        color: var(--white);
+        opacity: 70%;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
+    .comp-3 p:nth-child(odd),
+    .comp-5 p:nth-child(odd) {
+        color: var(--very-dark-blackish-blue);
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .comp-3 p:nth-child(even),
+    .comp-5 p:nth-child(odd) {
+        color: var(--very-dark-blackish-blue);
+        opacity: 70%;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    
+    .comp-3 h3,
+    .comp-3 h6,
+    .comp-5 h3,
+    .comp-5 h6 {
+        color: var(--very-dark-blackish-blue);
+    }   
+}
+
+@media only screen and (min-width: 376px) {
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--light-grayish-blue);
+    }
+    
+    .all-components {
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
+        grid-template-rows: repeat(2, 50%);
+        gap: 2vh;
+        grid-template-areas:
+            'comp1 comp1 comp2 comp5'
+            'comp3 comp4 comp4 comp5';
+        justify-content: center;    }
+    
+    .comp-1,
+    .comp-2,
+    .comp-3,
+    .comp-4,
+    .comp-5 {
+        padding: 24px 32px;
+        border-radius: 16px;
+    }
+    
+    .comp-1 {
+        grid-area: comp1;
+        background-color: var(--moderate-violet);
+        background-image: url('/images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position: right 15% top 0%;
+    }
+    
+    .comp-2 {
+        grid-area: comp2;
+        background-color: var(--very-dark-grayish-blue);
+    }
+    
+    .comp-3 {
+        grid-area: comp3;
+        background-color: var(--white);
+    }
+    
+    .comp-4 {
+        grid-area: comp4;
+        background-color: var(--very-dark-blackish-blue);
+    }
+    
+    .comp-5 {
+        grid-area: comp5;
+        background-color: var(--white);
+    }
+    
+    .profile-box {
+        display: flex;
+        font-weight: 100;
+        margin-bottom: 16px;
+    }
+    
+    .profile-box img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: var(--light-grayish-blue) 1px solid;
+    }
+    
+    .comp-4 img{
+        border: var(--moderate-violet) 1px solid;
+    }
+
+    .profile-box .profile-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 8px;
+    }
+    
+    .profile-text p:nth-child(odd) {
+        color: var(--light-grayish-blue);
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .profile-text p:nth-child(even) {
+        color: var(--light-grayish-blue);
+        opacity: 50%;
+        font-size: 10px;
+    }
+    
+    h3 {
+        color: var(--white);
+        font-size: 22px;
+        font-weight: 600;
+    }
+    
+    h6 {
+        color: var(--white);
+        opacity: 70%;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
+    .comp-3 p:nth-child(odd),
+    .comp-5 p:nth-child(odd) {
+        color: var(--very-dark-blackish-blue);
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .comp-3 p:nth-child(even),
+    .comp-5 p:nth-child(odd) {
+        color: var(--very-dark-blackish-blue);
+        opacity: 70%;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    
+    .comp-3 h3,
+    .comp-3 h6,
+    .comp-5 h3,
+    .comp-5 h6 {
+        color: var(--very-dark-blackish-blue);
+    }   
+}
